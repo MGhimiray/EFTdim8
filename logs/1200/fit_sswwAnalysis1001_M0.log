@@ -1,0 +1,1279 @@
+Combine cards Done 
+ Error in <TFile::TFile>: file /eos/user/m/mghimira/Combine/CMSSW_14_1_4/src/HiggsAnalysis/AnalyticAnomalousCoupling/SMP-25-013/inputs/output_sswwAnalysis1001_M0_20220_bin0.root does not exist
+ Operators =  ['cG', 'cGtil', 'cH', 'cHB', 'cHBtil', 'cHDD', 'cHG', 'cHGtil', 'cHW', 'cHWB', 'cHWBtil', 'cHWtil', 'cHbox', 'cHd', 'cHe', 'cHl1', 'cHl3', 'cHq1', 'cHq3', 'cHu', 'cHudAbs', 'cHudPh', 'cW', 'cWtil', 'cdBAbs', 'cdBPh', 'cdGAbs', 'cdGPh', 'cdHAbs', 'cdHPh', 'cdWAbs', 'cdWPh', 'cdd', 'cdd1', 'ceBAbs', 'ceBPh', 'ceHAbs', 'ceHPh', 'ceWAbs', 'ceWPh', 'ced', 'cee', 'ceu', 'cld', 'cle', 'cledqAbs', 'cledqPh', 'clequ1Abs', 'clequ1Ph', 'clequ3Abs', 'clequ3Ph', 'cll', 'cll1', 'clq1', 'clq3', 'clu', 'cqd1', 'cqd8', 'cqe', 'cqq1', 'cqq11', 'cqq3', 'cqq31', 'cqu1', 'cqu8', 'cquqd1Abs', 'cquqd1Ph', 'cquqd8Abs', 'cquqd8Ph', 'cuBAbs', 'cuBPh', 'cuGAbs', 'cuGPh', 'cuHAbs', 'cuHPh', 'cuWAbs', 'cuWPh', 'cud1', 'cud8', 'cuu', 'cuu1', 'cjj11', 'cjj18', 'cjj31', 'cjj38', 'cHj1', 'cHQ1']
+ Operators =  ['cM0']
+Traceback (most recent call last):
+  File "/eos/home-m/mghimira/Combine/CMSSW_14_1_4/bin/el9_amd64_gcc12/text2workspace.py", line 103, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/eos/home-m/mghimira/Combine/CMSSW_14_1_4/src/HiggsAnalysis/CombinedLimit/python/ModelTools.py", line 169, in doModel
+    self.doObservables()
+  File "/eos/home-m/mghimira/Combine/CMSSW_14_1_4/src/HiggsAnalysis/CombinedLimit/python/ShapeTools.py", line 82, in doObservables
+    self.prepareAllShapes()
+  File "/eos/home-m/mghimira/Combine/CMSSW_14_1_4/src/HiggsAnalysis/CombinedLimit/python/ShapeTools.py", line 477, in prepareAllShapes
+    shape = self.getShape(b, p)
+  File "/eos/home-m/mghimira/Combine/CMSSW_14_1_4/src/HiggsAnalysis/CombinedLimit/python/ShapeTools.py", line 711, in getShape
+    file = self._fileCache[finalNames[0]]
+  File "/eos/home-m/mghimira/Combine/CMSSW_14_1_4/src/HiggsAnalysis/CombinedLimit/python/ShapeTools.py", line 54, in __getitem__
+    filehandle = ROOT.TFile.Open(trueFName)
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/lcg/root/6.30.09-3de410abaee49ca44c9accc4e505a619/lib/ROOT/_pythonization/_tfile.py", line 103, in _TFileOpen
+    raise OSError('Failed to open file {}'.format(str(args[0])))
+OSError: Failed to open file /eos/user/m/mghimira/Combine/CMSSW_14_1_4/src/HiggsAnalysis/AnalyticAnomalousCoupling/SMP-25-013/inputs/output_sswwAnalysis1001_M0_20220_bin0.root
+Workspace Done 
+  <<< Combine >>> 
+ <<< v10.2.1 >>>
+>>> Random number generator seed is 123456
+>>> Method used is MultiDimFit
+ModelConfig 'ModelConfig' defines more than one parameter of interest. This is not supported in some statistical methods.
+Combine cards Done 
+ ============================================================
+Analyzing bin errors for: prop_binch1
+Poisson cut-off: 0
+============================================================
+Bin        Contents        Error           Notes                         
+0          3.116333        0.585296        total sum                     
+0          28.000000       5.291503        Unweighted events, alpha=0.111298
+  => Total parameter prop_binch1_bin0[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+1          2.124178        0.381075        total sum                     
+1          31.000000       5.567764        Unweighted events, alpha=0.068522
+  => Total parameter prop_binch1_bin1[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+2          1.397348        0.241779        total sum                     
+2          33.000000       5.744563        Unweighted events, alpha=0.042344
+  => Total parameter prop_binch1_bin2[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+3          0.963525        0.122491        total sum                     
+3          62.000000       7.874008        Unweighted events, alpha=0.015541
+  => Total parameter prop_binch1_bin3[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+4          2.977603        0.373645        total sum                     
+4          64.000000       8.000000        Unweighted events, alpha=0.046525
+  => Total parameter prop_binch1_bin4[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+5          2.031845        0.248758        total sum                     
+5          67.000000       8.185353        Unweighted events, alpha=0.030326
+  => Total parameter prop_binch1_bin5[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+6          1.340263        0.148710        total sum                     
+6          81.000000       9.000000        Unweighted events, alpha=0.016546
+  => Total parameter prop_binch1_bin6[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+7          1.126730        0.191616        total sum                     
+7          35.000000       5.916080        Unweighted events, alpha=0.032192
+  => Total parameter prop_binch1_bin7[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+8          2.988711        0.446972        total sum                     
+8          45.000000       6.708204        Unweighted events, alpha=0.066416
+  => Total parameter prop_binch1_bin8[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+9          1.543594        0.234788        total sum                     
+9          43.000000       6.557439        Unweighted events, alpha=0.035898
+  => Total parameter prop_binch1_bin9[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+10         1.449594        0.208713        total sum                     
+10         48.000000       6.928203        Unweighted events, alpha=0.030200
+  => Total parameter prop_binch1_bin10[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+11         0.936744        0.075687        total sum                     
+11         153.000000      12.369317       Unweighted events, alpha=0.006123
+  => Total parameter prop_binch1_bin11[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+12         3.879857        0.607768        total sum                     
+12         41.000000       6.403124        Unweighted events, alpha=0.094631
+  => Total parameter prop_binch1_bin12[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+13         1.349245        0.210296        total sum                     
+13         41.000000       6.403124        Unweighted events, alpha=0.032908
+  => Total parameter prop_binch1_bin13[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+14         1.386009        0.231225        total sum                     
+14         36.000000       6.000000        Unweighted events, alpha=0.038500
+  => Total parameter prop_binch1_bin14[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+15         1.251412        0.180680        total sum                     
+15         48.000000       6.928203        Unweighted events, alpha=0.026071
+  => Total parameter prop_binch1_bin15[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+============================================================
+Analyzing bin errors for: prop_binch2
+Poisson cut-off: 0
+============================================================
+Bin        Contents        Error           Notes                         
+0          16.625224       1.746429        total sum                     
+0          91.000000       9.539392        Unweighted events, alpha=0.182695
+  => Total parameter prop_binch2_bin0[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+1          6.951527        0.664587        total sum                     
+1          109.000000      10.440307       Unweighted events, alpha=0.063775
+  => Total parameter prop_binch2_bin1[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+2          4.219215        0.640921        total sum                     
+2          43.000000       6.557439        Unweighted events, alpha=0.098121
+  => Total parameter prop_binch2_bin2[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+3          1.757388        0.243396        total sum                     
+3          52.000000       7.211103        Unweighted events, alpha=0.033796
+  => Total parameter prop_binch2_bin3[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+============================================================
+Analyzing bin errors for: prop_binch3
+Poisson cut-off: 0
+============================================================
+Bin        Contents        Error           Notes                         
+0          10.607444       1.387019        total sum                     
+0          58.000000       7.615773        Unweighted events, alpha=0.182887
+  => Total parameter prop_binch3_bin0[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+1          5.943968        0.667068        total sum                     
+1          79.000000       8.888194        Unweighted events, alpha=0.075240
+  => Total parameter prop_binch3_bin1[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+2          3.693920        0.346192        total sum                     
+2          114.000000      10.677078       Unweighted events, alpha=0.032403
+  => Total parameter prop_binch3_bin2[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+3          2.846209        0.282409        total sum                     
+3          102.000000      10.099505       Unweighted events, alpha=0.027904
+  => Total parameter prop_binch3_bin3[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+4          12.015740       0.896929        total sum                     
+4          179.000000      13.379088       Unweighted events, alpha=0.067127
+  => Total parameter prop_binch3_bin4[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+5          5.898238        0.579916        total sum                     
+5          103.000000      10.148892       Unweighted events, alpha=0.057264
+  => Total parameter prop_binch3_bin5[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+6          5.020399        0.517167        total sum                     
+6          94.000000       9.695360        Unweighted events, alpha=0.053408
+  => Total parameter prop_binch3_bin6[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+7          3.503802        0.262392        total sum                     
+7          178.000000      13.341664       Unweighted events, alpha=0.019684
+  => Total parameter prop_binch3_bin7[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+8          8.741376        0.737707        total sum                     
+8          140.000000      11.832160       Unweighted events, alpha=0.062438
+  => Total parameter prop_binch3_bin8[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+9          4.541072        0.403062        total sum                     
+9          127.000000      11.269428       Unweighted events, alpha=0.035756
+  => Total parameter prop_binch3_bin9[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+10         3.512836        0.258935        total sum                     
+10         184.000000      13.564660       Unweighted events, alpha=0.019092
+  => Total parameter prop_binch3_bin10[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+11         3.125982        0.224621        total sum                     
+11         194.000000      13.928388       Unweighted events, alpha=0.016113
+  => Total parameter prop_binch3_bin11[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+12         8.484547        0.831084        total sum                     
+12         104.000000      10.198039       Unweighted events, alpha=0.081582
+  => Total parameter prop_binch3_bin12[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+13         4.688735        0.480628        total sum                     
+13         95.000000       9.746794        Unweighted events, alpha=0.049355
+  => Total parameter prop_binch3_bin13[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+14         3.444934        0.332786        total sum                     
+14         107.000000      10.344080       Unweighted events, alpha=0.032196
+  => Total parameter prop_binch3_bin14[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+15         3.536820        0.281797        total sum                     
+15         158.000000      12.569805       Unweighted events, alpha=0.022385
+  => Total parameter prop_binch3_bin15[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+============================================================
+Analyzing bin errors for: prop_binch4
+Poisson cut-off: 0
+============================================================
+Bin        Contents        Error           Notes                         
+0          48.407916       3.419339        total sum                     
+0          200.000000      14.142136       Unweighted events, alpha=0.242040
+  => Total parameter prop_binch4_bin0[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+1          20.368625       1.235199        total sum                     
+1          272.000000      16.492423       Unweighted events, alpha=0.074885
+  => Total parameter prop_binch4_bin1[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+2          12.608810       0.836681        total sum                     
+2          227.000000      15.066519       Unweighted events, alpha=0.055545
+  => Total parameter prop_binch4_bin2[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+3          5.600132        0.441285        total sum                     
+3          161.000000      12.688578       Unweighted events, alpha=0.034783
+  => Total parameter prop_binch4_bin3[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+============================================================
+Analyzing bin errors for: prop_binch5
+Poisson cut-off: 0
+============================================================
+Bin        Contents        Error           Notes                         
+0          8.116891        0.838891        total sum                     
+0          94.000000       9.695360        Unweighted events, alpha=0.086350
+  => Total parameter prop_binch5_bin0[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+1          4.436985        0.475754        total sum                     
+1          87.000000       9.327379        Unweighted events, alpha=0.051000
+  => Total parameter prop_binch5_bin1[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+2          3.094584        0.378016        total sum                     
+2          67.000000       8.185353        Unweighted events, alpha=0.046188
+  => Total parameter prop_binch5_bin2[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+3          3.446267        1.479122        total sum                     
+3          5.000000        2.236068        Unweighted events, alpha=0.689253
+  => Total parameter prop_binch5_bin3[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+4          8.137162        0.867264        total sum                     
+4          88.000000       9.380832        Unweighted events, alpha=0.092468
+  => Total parameter prop_binch5_bin4[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+5          4.092356        0.394989        total sum                     
+5          107.000000      10.344080       Unweighted events, alpha=0.038246
+  => Total parameter prop_binch5_bin5[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+6          3.407811        0.273700        total sum                     
+6          155.000000      12.449900       Unweighted events, alpha=0.021986
+  => Total parameter prop_binch5_bin6[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+7          2.135843        0.079888        total sum                     
+7          715.000000      26.739484       Unweighted events, alpha=0.002987
+  => Total parameter prop_binch5_bin7[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+8          5.595642        0.558490        total sum                     
+8          100.000000      10.000000       Unweighted events, alpha=0.055956
+  => Total parameter prop_binch5_bin8[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+9          3.477424        0.475174        total sum                     
+9          54.000000       7.348469        Unweighted events, alpha=0.064397
+  => Total parameter prop_binch5_bin9[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+10         2.434394        0.224045        total sum                     
+10         118.000000      10.862780       Unweighted events, alpha=0.020630
+  => Total parameter prop_binch5_bin10[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+11         1.914678        0.146182        total sum                     
+11         172.000000      13.114877       Unweighted events, alpha=0.011132
+  => Total parameter prop_binch5_bin11[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+12         6.823362        0.734371        total sum                     
+12         86.000000       9.273618        Unweighted events, alpha=0.079341
+  => Total parameter prop_binch5_bin12[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+13         3.237580        0.395732        total sum                     
+13         67.000000       8.185353        Unweighted events, alpha=0.048322
+  => Total parameter prop_binch5_bin13[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+14         2.765822        0.332943        total sum                     
+14         69.000000       8.306624        Unweighted events, alpha=0.040084
+  => Total parameter prop_binch5_bin14[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+15         2.532365        0.249221        total sum                     
+15         103.000000      10.148892       Unweighted events, alpha=0.024586
+  => Total parameter prop_binch5_bin15[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+============================================================
+Analyzing bin errors for: prop_binch6
+Poisson cut-off: 0
+============================================================
+Bin        Contents        Error           Notes                         
+0          47.881845       3.418868        total sum                     
+0          196.000000      14.000000       Unweighted events, alpha=0.244295
+  => Total parameter prop_binch6_bin0[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+1          16.643652       0.992057        total sum                     
+1          281.000000      16.763055       Unweighted events, alpha=0.059230
+  => Total parameter prop_binch6_bin1[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+2          10.385538       0.885532        total sum                     
+2          138.000000      11.747340       Unweighted events, alpha=0.075258
+  => Total parameter prop_binch6_bin2[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+3          4.509928        0.374947        total sum                     
+3          145.000000      12.041595       Unweighted events, alpha=0.031103
+  => Total parameter prop_binch6_bin3[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+============================================================
+Analyzing bin errors for: prop_binch7
+Poisson cut-off: 0
+============================================================
+Bin        Contents        Error           Notes                         
+0          5.171603        1.137321        total sum                     
+0          21.000000       4.582576        Unweighted events, alpha=0.246267
+  => Total parameter prop_binch7_bin0[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+1          1.661544        0.251715        total sum                     
+1          44.000000       6.633250        Unweighted events, alpha=0.037762
+  => Total parameter prop_binch7_bin1[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+2          1.697821        4.577875        total sum                     
+2          0.000000        0.000000        Unweighted events, alpha=inf  
+  => Number of weighted events is below Poisson threshold
+    sm                   0.915925        0.047328                                      
+                         375.000000      19.364917       Unweighted events, alpha=0.002442
+      => Parameter prop_binch7_bin2_sm[0.00,-7.00,7.00] to be Gaussian constrained
+  ----------------------------------------------------------
+    QCDSSWW              0.039503        0.008442                                      
+                         22.000000       4.690416        Unweighted events, alpha=0.001796
+      => Parameter prop_binch7_bin2_QCDSSWW[0.00,-7.00,7.00] to be Gaussian constrained
+  ----------------------------------------------------------
+    EWKWZ                0.064792        0.014279                                      
+                         21.000000       4.582576        Unweighted events, alpha=0.003085
+      => Parameter prop_binch7_bin2_EWKWZ[0.00,-7.00,7.00] to be Gaussian constrained
+  ----------------------------------------------------------
+    WZ                   0.073580        0.048548                                      
+                         2.000000        1.414214        Unweighted events, alpha=0.036790
+      => Parameter prop_binch7_bin2_WZ[0.00,-7.00,7.00] to be Gaussian constrained
+  ----------------------------------------------------------
+    ZZ                   0.001561        0.000485                                      
+                         10.000000       3.162278        Unweighted events, alpha=0.000156
+      => Parameter prop_binch7_bin2_ZZ[0.00,-7.00,7.00] to be Gaussian constrained
+  ----------------------------------------------------------
+    NonPrompt            0.573727        0.213129                                      
+                         7.000000        2.645751        Unweighted events, alpha=0.081961
+      => Parameter prop_binch7_bin2_NonPrompt[0.00,-7.00,7.00] to be Gaussian constrained
+  ----------------------------------------------------------
+    VVV                  0.028693        0.016358                                      
+                         3.000000        1.732051        Unweighted events, alpha=0.009564
+      => Parameter prop_binch7_bin2_VVV[0.00,-7.00,7.00] to be Gaussian constrained
+  ----------------------------------------------------------
+    TVX                  0.000040        0.000024                                      
+                         3.000000        1.732051        Unweighted events, alpha=0.000013
+      => Parameter prop_binch7_bin2_TVX[0.00,-7.00,7.00] to be Gaussian constrained
+  ----------------------------------------------------------
+    VG                   0.000000        0.009285                                      
+      => Poisson not viable, prop_binch7_bin2_VG[0.00,-7.00,7.00] to be Gaussian constrained
+  ----------------------------------------------------------
+    WS                   0.000000        4.572340                                      
+      => Poisson not viable, prop_binch7_bin2_WS[0.00,-7.00,7.00] to be Gaussian constrained
+  ----------------------------------------------------------
+    sm_lin_quad_cM0      0.916430        0.047328                                      
+                         375.000000      19.364917       Unweighted events, alpha=0.002444
+      => Parameter prop_binch7_bin2_sm_lin_quad_cM0[0.00,-7.00,7.00] to be Gaussian constrained
+  ----------------------------------------------------------
+    quad_cM0             0.000000        0.000000                                      
+      => Error is zero, ignore      
+  ----------------------------------------------------------
+------------------------------------------------------------
+3          1.369141        0.228698        total sum                     
+3          36.000000       6.000000        Unweighted events, alpha=0.038032
+  => Total parameter prop_binch7_bin3[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+4          4.237232        0.546041        total sum                     
+4          60.000000       7.745967        Unweighted events, alpha=0.070621
+  => Total parameter prop_binch7_bin4[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+5          2.752122        0.403319        total sum                     
+5          47.000000       6.855655        Unweighted events, alpha=0.058556
+  => Total parameter prop_binch7_bin5[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+6          1.569174        0.213018        total sum                     
+6          54.000000       7.348469        Unweighted events, alpha=0.029059
+  => Total parameter prop_binch7_bin6[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+7          1.681548        0.212297        total sum                     
+7          63.000000       7.937254        Unweighted events, alpha=0.026691
+  => Total parameter prop_binch7_bin7[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+8          3.028074        0.422138        total sum                     
+8          51.000000       7.141428        Unweighted events, alpha=0.059374
+  => Total parameter prop_binch7_bin8[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+9          1.643999        0.255384        total sum                     
+9          41.000000       6.403124        Unweighted events, alpha=0.040098
+  => Total parameter prop_binch7_bin9[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+10         1.233436        0.135402        total sum                     
+10         83.000000       9.110434        Unweighted events, alpha=0.014861
+  => Total parameter prop_binch7_bin10[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+11         1.042012        0.075991        total sum                     
+11         188.000000      13.711309       Unweighted events, alpha=0.005543
+  => Total parameter prop_binch7_bin11[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+12         3.452955        0.497915        total sum                     
+12         48.000000       6.928203        Unweighted events, alpha=0.071937
+  => Total parameter prop_binch7_bin12[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+13         1.496922        0.226967        total sum                     
+13         43.000000       6.557439        Unweighted events, alpha=0.034812
+  => Total parameter prop_binch7_bin13[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+14         1.363330        0.229626        total sum                     
+14         35.000000       5.916080        Unweighted events, alpha=0.038952
+  => Total parameter prop_binch7_bin14[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+15         1.224202        0.119255        total sum                     
+15         105.000000      10.246951       Unweighted events, alpha=0.011659
+  => Total parameter prop_binch7_bin15[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+============================================================
+Analyzing bin errors for: prop_binch8
+Poisson cut-off: 0
+============================================================
+Bin        Contents        Error           Notes                         
+0          26.883372       7.284269        total sum                     
+0          14.000000       3.741657        Unweighted events, alpha=1.920241
+  => Total parameter prop_binch8_bin0[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+1          9.013643        0.894784        total sum                     
+1          101.000000      10.049876       Unweighted events, alpha=0.089244
+  => Total parameter prop_binch8_bin1[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+2          5.357622        0.517004        total sum                     
+2          107.000000      10.344080       Unweighted events, alpha=0.050071
+  => Total parameter prop_binch8_bin2[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+3          2.955472        0.335487        total sum                     
+3          78.000000       8.831761        Unweighted events, alpha=0.037891
+  => Total parameter prop_binch8_bin3[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+============================================================
+Analyzing bin errors for: prop_binch9
+Poisson cut-off: 0
+============================================================
+Bin        Contents        Error           Notes                         
+0          36.889353       4.527500        total sum                     
+0          66.000000       8.124038        Unweighted events, alpha=0.558930
+  => Total parameter prop_binch9_bin0[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+1          17.523909       0.928897        total sum                     
+1          356.000000      18.867962       Unweighted events, alpha=0.049224
+  => Total parameter prop_binch9_bin1[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+2          16.300774       1.229229        total sum                     
+2          176.000000      13.266499       Unweighted events, alpha=0.092618
+  => Total parameter prop_binch9_bin2[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+3          11.162236       0.454963        total sum                     
+3          602.000000      24.535688       Unweighted events, alpha=0.018542
+  => Total parameter prop_binch9_bin3[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+4          36.322923       1.954004        total sum                     
+4          346.000000      18.601075       Unweighted events, alpha=0.104980
+  => Total parameter prop_binch9_bin4[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+5          20.361748       1.025330        total sum                     
+5          394.000000      19.849433       Unweighted events, alpha=0.051680
+  => Total parameter prop_binch9_bin5[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+6          18.542805       1.313362        total sum                     
+6          199.000000      14.106736       Unweighted events, alpha=0.093180
+  => Total parameter prop_binch9_bin6[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+7          14.040530       0.366663        total sum                     
+7          1466.000000     38.288379       Unweighted events, alpha=0.009577
+  => Total parameter prop_binch9_bin7[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+8          29.985007       2.011478        total sum                     
+8          222.000000      14.899664       Unweighted events, alpha=0.135068
+  => Total parameter prop_binch9_bin8[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+9          17.735550       1.515274        total sum                     
+9          137.000000      11.704700       Unweighted events, alpha=0.129457
+  => Total parameter prop_binch9_bin9[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+10         15.852617       1.661008        total sum                     
+10         91.000000       9.539392        Unweighted events, alpha=0.174205
+  => Total parameter prop_binch9_bin10[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+11         11.989539       0.284820        total sum                     
+11         1772.000000     42.095130       Unweighted events, alpha=0.006766
+  => Total parameter prop_binch9_bin11[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+12         24.050650       0.975941        total sum                     
+12         607.000000      24.637370       Unweighted events, alpha=0.039622
+  => Total parameter prop_binch9_bin12[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+13         16.053788       0.757509        total sum                     
+13         449.000000      21.189620       Unweighted events, alpha=0.035755
+  => Total parameter prop_binch9_bin13[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+14         16.316283       1.860871        total sum                     
+14         77.000000       8.774964        Unweighted events, alpha=0.211900
+  => Total parameter prop_binch9_bin14[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+15         14.005405       0.305856        total sum                     
+15         2097.000000     45.793013       Unweighted events, alpha=0.006679
+  => Total parameter prop_binch9_bin15[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+============================================================
+Analyzing bin errors for: prop_binch10
+Poisson cut-off: 0
+============================================================
+Bin        Contents        Error           Notes                         
+0          173.791950      8.912821        total sum                     
+0          380.000000      19.493589       Unweighted events, alpha=0.457347
+  => Total parameter prop_binch10_bin0[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+1          65.469416       3.126442        total sum                     
+1          439.000000      20.952327       Unweighted events, alpha=0.149133
+  => Total parameter prop_binch10_bin1[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+2          38.711344       1.195974        total sum                     
+2          1048.000000     32.372828       Unweighted events, alpha=0.036938
+  => Total parameter prop_binch10_bin2[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+3          19.788981       0.742459        total sum                     
+3          710.000000      26.645825       Unweighted events, alpha=0.027872
+  => Total parameter prop_binch10_bin3[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+============================================================
+Analyzing bin errors for: prop_binch11
+Poisson cut-off: 0
+============================================================
+Bin        Contents        Error           Notes                         
+0          41.935942       4.354824        total sum                     
+0          93.000000       9.643651        Unweighted events, alpha=0.450924
+  => Total parameter prop_binch11_bin0[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+1          20.936089       1.908104        total sum                     
+1          120.000000      10.954451       Unweighted events, alpha=0.174467
+  => Total parameter prop_binch11_bin1[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+2          17.172104       1.397827        total sum                     
+2          151.000000      12.288206       Unweighted events, alpha=0.113723
+  => Total parameter prop_binch11_bin2[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+3          11.902960       0.527728        total sum                     
+3          509.000000      22.561028       Unweighted events, alpha=0.023385
+  => Total parameter prop_binch11_bin3[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+4          40.367547       2.233674        total sum                     
+4          327.000000      18.083141       Unweighted events, alpha=0.123448
+  => Total parameter prop_binch11_bin4[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+5          21.162403       1.135509        total sum                     
+5          347.000000      18.627936       Unweighted events, alpha=0.060987
+  => Total parameter prop_binch11_bin5[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+6          19.144941       1.484631        total sum                     
+6          166.000000      12.884099       Unweighted events, alpha=0.115331
+  => Total parameter prop_binch11_bin6[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+7          13.460771       0.350400        total sum                     
+7          1476.000000     38.418745       Unweighted events, alpha=0.009120
+  => Total parameter prop_binch11_bin7[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+8          28.542008       2.546211        total sum                     
+8          126.000000      11.224972       Unweighted events, alpha=0.226524
+  => Total parameter prop_binch11_bin8[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+9          19.795027       1.783724        total sum                     
+9          123.000000      11.090537       Unweighted events, alpha=0.160935
+  => Total parameter prop_binch11_bin9[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+10         15.792420       1.976315        total sum                     
+10         64.000000       8.000000        Unweighted events, alpha=0.246757
+  => Total parameter prop_binch11_bin10[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+11         12.138566       0.371345        total sum                     
+11         1069.000000     32.695565       Unweighted events, alpha=0.011355
+  => Total parameter prop_binch11_bin11[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+12         26.678158       1.253945        total sum                     
+12         453.000000      21.283797       Unweighted events, alpha=0.058892
+  => Total parameter prop_binch11_bin12[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+13         16.130927       0.757269        total sum                     
+13         454.000000      21.307276       Unweighted events, alpha=0.035531
+  => Total parameter prop_binch11_bin13[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+14         17.160913       2.406309        total sum                     
+14         51.000000       7.141428        Unweighted events, alpha=0.336488
+  => Total parameter prop_binch11_bin14[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+15         14.563565       0.413538        total sum                     
+15         1240.000000     35.213634       Unweighted events, alpha=0.011745
+  => Total parameter prop_binch11_bin15[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+============================================================
+Analyzing bin errors for: prop_binch12
+Poisson cut-off: 0
+============================================================
+Bin        Contents        Error           Notes                         
+0          217.097812      13.333042       total sum                     
+0          265.000000      16.278821       Unweighted events, alpha=0.819237
+  => Total parameter prop_binch12_bin0[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+1          79.719858       3.961632        total sum                     
+1          405.000000      20.124612       Unweighted events, alpha=0.196839
+  => Total parameter prop_binch12_bin1[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+2          42.869075       1.466255        total sum                     
+2          855.000000      29.240383       Unweighted events, alpha=0.050139
+  => Total parameter prop_binch12_bin2[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+3          20.476859       0.842355        total sum                     
+3          591.000000      24.310492       Unweighted events, alpha=0.034648
+  => Total parameter prop_binch12_bin3[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+ Operators =  ['cG', 'cGtil', 'cH', 'cHB', 'cHBtil', 'cHDD', 'cHG', 'cHGtil', 'cHW', 'cHWB', 'cHWBtil', 'cHWtil', 'cHbox', 'cHd', 'cHe', 'cHl1', 'cHl3', 'cHq1', 'cHq3', 'cHu', 'cHudAbs', 'cHudPh', 'cW', 'cWtil', 'cdBAbs', 'cdBPh', 'cdGAbs', 'cdGPh', 'cdHAbs', 'cdHPh', 'cdWAbs', 'cdWPh', 'cdd', 'cdd1', 'ceBAbs', 'ceBPh', 'ceHAbs', 'ceHPh', 'ceWAbs', 'ceWPh', 'ced', 'cee', 'ceu', 'cld', 'cle', 'cledqAbs', 'cledqPh', 'clequ1Abs', 'clequ1Ph', 'clequ3Abs', 'clequ3Ph', 'cll', 'cll1', 'clq1', 'clq3', 'clu', 'cqd1', 'cqd8', 'cqe', 'cqq1', 'cqq11', 'cqq3', 'cqq31', 'cqu1', 'cqu8', 'cquqd1Abs', 'cquqd1Ph', 'cquqd8Abs', 'cquqd8Ph', 'cuBAbs', 'cuBPh', 'cuGAbs', 'cuGPh', 'cuHAbs', 'cuHPh', 'cuWAbs', 'cuWPh', 'cud1', 'cud8', 'cuu', 'cuu1', 'cjj11', 'cjj18', 'cjj31', 'cjj38', 'cHj1', 'cHQ1']
+ Operators =  ['cM0']
+ parameters of interest =  r,k_cM0
+ self.numOperators =  1
+Channel ch1 will use autoMCStats with settings: event-threshold=0, include-signal=0, hist-mode=1
+Channel ch2 will use autoMCStats with settings: event-threshold=0, include-signal=0, hist-mode=1
+Channel ch3 will use autoMCStats with settings: event-threshold=0, include-signal=0, hist-mode=1
+Channel ch4 will use autoMCStats with settings: event-threshold=0, include-signal=0, hist-mode=1
+Channel ch5 will use autoMCStats with settings: event-threshold=0, include-signal=0, hist-mode=1
+Channel ch6 will use autoMCStats with settings: event-threshold=0, include-signal=0, hist-mode=1
+Channel ch7 will use autoMCStats with settings: event-threshold=0, include-signal=0, hist-mode=1
+Channel ch8 will use autoMCStats with settings: event-threshold=0, include-signal=0, hist-mode=1
+Channel ch9 will use autoMCStats with settings: event-threshold=0, include-signal=0, hist-mode=1
+Channel ch10 will use autoMCStats with settings: event-threshold=0, include-signal=0, hist-mode=1
+Channel ch11 will use autoMCStats with settings: event-threshold=0, include-signal=0, hist-mode=1
+Channel ch12 will use autoMCStats with settings: event-threshold=0, include-signal=0, hist-mode=1
+Workspace Done 
+  <<< Combine >>> 
+ <<< v10.2.1 >>>
+>>> Random number generator seed is 123456
+>>> Method used is MultiDimFit
+ModelConfig 'ModelConfig' defines more than one parameter of interest. This is not supported in some statistical methods.
+Done in 58.16 min (cpu), 58.58 min (real)
+ Expected Fit Done 
+  <<< Combine >>> 
+ <<< v10.2.1 >>>
+>>> Random number generator seed is 123456
+>>> Method used is MultiDimFit
+ModelConfig 'ModelConfig' defines more than one parameter of interest. This is not supported in some statistical methods.
+Done in 53.73 min (cpu), 54.18 min (real)
+ Observed Fit Done 
+ Info in <TCanvas::MakeDefCanvas>:  created default TCanvas with name c1
+Info in <TCanvas::Print>: png file plots/1200/scan_M0.png has been created
+Info in <TCanvas::Print>: pdf file plots/1200/scan_M0.pdf has been created
+Main scan 68.27% C.L (1 s.d.)  k_cM0<1: [-11.45944940803928, 10.591382830729728] --> -0.009+10.600-11.451
+Main scan 95.45% C.L (2 s.d.)  k_cM0<4: [-16.83917784114205, 15.744122786620142] --> -0.009+15.753-16.831
+@ @ @ WARNING @ @ @: returning graph x-axis higher limit
+Observed scan 68.27% C.L (1 s.d.)  k_cM0<1: [-16.283677447513025, 20.389801025390625] --> -16.992+37.381-0.708
+Observed scan 95.45% C.L (2 s.d.)  k_cM0<4: [-14.342014466610799, 16.71563852839903] --> -16.992+33.707-2.649
+Combine cards Done 
+ ============================================================
+Analyzing bin errors for: prop_binch1
+Poisson cut-off: 0
+============================================================
+Bin        Contents        Error           Notes                         
+0          3.116333        0.585296        total sum                     
+0          28.000000       5.291503        Unweighted events, alpha=0.111298
+  => Total parameter prop_binch1_bin0[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+1          2.124178        0.381075        total sum                     
+1          31.000000       5.567764        Unweighted events, alpha=0.068522
+  => Total parameter prop_binch1_bin1[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+2          1.397348        0.241779        total sum                     
+2          33.000000       5.744563        Unweighted events, alpha=0.042344
+  => Total parameter prop_binch1_bin2[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+3          0.963525        0.122491        total sum                     
+3          62.000000       7.874008        Unweighted events, alpha=0.015541
+  => Total parameter prop_binch1_bin3[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+4          2.977603        0.373645        total sum                     
+4          64.000000       8.000000        Unweighted events, alpha=0.046525
+  => Total parameter prop_binch1_bin4[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+5          2.031845        0.248758        total sum                     
+5          67.000000       8.185353        Unweighted events, alpha=0.030326
+  => Total parameter prop_binch1_bin5[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+6          1.340263        0.148710        total sum                     
+6          81.000000       9.000000        Unweighted events, alpha=0.016546
+  => Total parameter prop_binch1_bin6[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+7          1.126730        0.191616        total sum                     
+7          35.000000       5.916080        Unweighted events, alpha=0.032192
+  => Total parameter prop_binch1_bin7[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+8          2.988711        0.446972        total sum                     
+8          45.000000       6.708204        Unweighted events, alpha=0.066416
+  => Total parameter prop_binch1_bin8[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+9          1.543594        0.234788        total sum                     
+9          43.000000       6.557439        Unweighted events, alpha=0.035898
+  => Total parameter prop_binch1_bin9[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+10         1.449594        0.208713        total sum                     
+10         48.000000       6.928203        Unweighted events, alpha=0.030200
+  => Total parameter prop_binch1_bin10[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+11         0.936744        0.075687        total sum                     
+11         153.000000      12.369317       Unweighted events, alpha=0.006123
+  => Total parameter prop_binch1_bin11[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+12         3.879857        0.607768        total sum                     
+12         41.000000       6.403124        Unweighted events, alpha=0.094631
+  => Total parameter prop_binch1_bin12[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+13         1.349245        0.210296        total sum                     
+13         41.000000       6.403124        Unweighted events, alpha=0.032908
+  => Total parameter prop_binch1_bin13[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+14         1.386009        0.231225        total sum                     
+14         36.000000       6.000000        Unweighted events, alpha=0.038500
+  => Total parameter prop_binch1_bin14[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+15         1.251412        0.180680        total sum                     
+15         48.000000       6.928203        Unweighted events, alpha=0.026071
+  => Total parameter prop_binch1_bin15[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+============================================================
+Analyzing bin errors for: prop_binch2
+Poisson cut-off: 0
+============================================================
+Bin        Contents        Error           Notes                         
+0          16.625224       1.746429        total sum                     
+0          91.000000       9.539392        Unweighted events, alpha=0.182695
+  => Total parameter prop_binch2_bin0[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+1          6.951527        0.664587        total sum                     
+1          109.000000      10.440307       Unweighted events, alpha=0.063775
+  => Total parameter prop_binch2_bin1[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+2          4.219215        0.640921        total sum                     
+2          43.000000       6.557439        Unweighted events, alpha=0.098121
+  => Total parameter prop_binch2_bin2[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+3          1.757388        0.243396        total sum                     
+3          52.000000       7.211103        Unweighted events, alpha=0.033796
+  => Total parameter prop_binch2_bin3[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+============================================================
+Analyzing bin errors for: prop_binch3
+Poisson cut-off: 0
+============================================================
+Bin        Contents        Error           Notes                         
+0          10.607444       1.387019        total sum                     
+0          58.000000       7.615773        Unweighted events, alpha=0.182887
+  => Total parameter prop_binch3_bin0[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+1          5.943968        0.667068        total sum                     
+1          79.000000       8.888194        Unweighted events, alpha=0.075240
+  => Total parameter prop_binch3_bin1[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+2          3.693920        0.346192        total sum                     
+2          114.000000      10.677078       Unweighted events, alpha=0.032403
+  => Total parameter prop_binch3_bin2[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+3          2.846209        0.282409        total sum                     
+3          102.000000      10.099505       Unweighted events, alpha=0.027904
+  => Total parameter prop_binch3_bin3[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+4          12.015740       0.896929        total sum                     
+4          179.000000      13.379088       Unweighted events, alpha=0.067127
+  => Total parameter prop_binch3_bin4[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+5          5.898238        0.579916        total sum                     
+5          103.000000      10.148892       Unweighted events, alpha=0.057264
+  => Total parameter prop_binch3_bin5[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+6          5.020399        0.517167        total sum                     
+6          94.000000       9.695360        Unweighted events, alpha=0.053408
+  => Total parameter prop_binch3_bin6[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+7          3.503802        0.262392        total sum                     
+7          178.000000      13.341664       Unweighted events, alpha=0.019684
+  => Total parameter prop_binch3_bin7[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+8          8.741376        0.737707        total sum                     
+8          140.000000      11.832160       Unweighted events, alpha=0.062438
+  => Total parameter prop_binch3_bin8[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+9          4.541072        0.403062        total sum                     
+9          127.000000      11.269428       Unweighted events, alpha=0.035756
+  => Total parameter prop_binch3_bin9[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+10         3.512836        0.258935        total sum                     
+10         184.000000      13.564660       Unweighted events, alpha=0.019092
+  => Total parameter prop_binch3_bin10[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+11         3.125982        0.224621        total sum                     
+11         194.000000      13.928388       Unweighted events, alpha=0.016113
+  => Total parameter prop_binch3_bin11[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+12         8.484547        0.831084        total sum                     
+12         104.000000      10.198039       Unweighted events, alpha=0.081582
+  => Total parameter prop_binch3_bin12[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+13         4.688735        0.480628        total sum                     
+13         95.000000       9.746794        Unweighted events, alpha=0.049355
+  => Total parameter prop_binch3_bin13[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+14         3.444934        0.332786        total sum                     
+14         107.000000      10.344080       Unweighted events, alpha=0.032196
+  => Total parameter prop_binch3_bin14[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+15         3.536820        0.281797        total sum                     
+15         158.000000      12.569805       Unweighted events, alpha=0.022385
+  => Total parameter prop_binch3_bin15[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+============================================================
+Analyzing bin errors for: prop_binch4
+Poisson cut-off: 0
+============================================================
+Bin        Contents        Error           Notes                         
+0          48.407916       3.419339        total sum                     
+0          200.000000      14.142136       Unweighted events, alpha=0.242040
+  => Total parameter prop_binch4_bin0[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+1          20.368625       1.235199        total sum                     
+1          272.000000      16.492423       Unweighted events, alpha=0.074885
+  => Total parameter prop_binch4_bin1[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+2          12.608810       0.836681        total sum                     
+2          227.000000      15.066519       Unweighted events, alpha=0.055545
+  => Total parameter prop_binch4_bin2[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+3          5.600132        0.441285        total sum                     
+3          161.000000      12.688578       Unweighted events, alpha=0.034783
+  => Total parameter prop_binch4_bin3[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+============================================================
+Analyzing bin errors for: prop_binch5
+Poisson cut-off: 0
+============================================================
+Bin        Contents        Error           Notes                         
+0          8.116891        0.838891        total sum                     
+0          94.000000       9.695360        Unweighted events, alpha=0.086350
+  => Total parameter prop_binch5_bin0[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+1          4.436985        0.475754        total sum                     
+1          87.000000       9.327379        Unweighted events, alpha=0.051000
+  => Total parameter prop_binch5_bin1[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+2          3.094584        0.378016        total sum                     
+2          67.000000       8.185353        Unweighted events, alpha=0.046188
+  => Total parameter prop_binch5_bin2[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+3          3.446267        1.479122        total sum                     
+3          5.000000        2.236068        Unweighted events, alpha=0.689253
+  => Total parameter prop_binch5_bin3[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+4          8.137162        0.867264        total sum                     
+4          88.000000       9.380832        Unweighted events, alpha=0.092468
+  => Total parameter prop_binch5_bin4[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+5          4.092356        0.394989        total sum                     
+5          107.000000      10.344080       Unweighted events, alpha=0.038246
+  => Total parameter prop_binch5_bin5[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+6          3.407811        0.273700        total sum                     
+6          155.000000      12.449900       Unweighted events, alpha=0.021986
+  => Total parameter prop_binch5_bin6[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+7          2.135843        0.079888        total sum                     
+7          715.000000      26.739484       Unweighted events, alpha=0.002987
+  => Total parameter prop_binch5_bin7[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+8          5.595642        0.558490        total sum                     
+8          100.000000      10.000000       Unweighted events, alpha=0.055956
+  => Total parameter prop_binch5_bin8[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+9          3.477424        0.475174        total sum                     
+9          54.000000       7.348469        Unweighted events, alpha=0.064397
+  => Total parameter prop_binch5_bin9[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+10         2.434394        0.224045        total sum                     
+10         118.000000      10.862780       Unweighted events, alpha=0.020630
+  => Total parameter prop_binch5_bin10[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+11         1.914678        0.146182        total sum                     
+11         172.000000      13.114877       Unweighted events, alpha=0.011132
+  => Total parameter prop_binch5_bin11[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+12         6.823362        0.734371        total sum                     
+12         86.000000       9.273618        Unweighted events, alpha=0.079341
+  => Total parameter prop_binch5_bin12[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+13         3.237580        0.395732        total sum                     
+13         67.000000       8.185353        Unweighted events, alpha=0.048322
+  => Total parameter prop_binch5_bin13[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+14         2.765822        0.332943        total sum                     
+14         69.000000       8.306624        Unweighted events, alpha=0.040084
+  => Total parameter prop_binch5_bin14[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+15         2.532365        0.249221        total sum                     
+15         103.000000      10.148892       Unweighted events, alpha=0.024586
+  => Total parameter prop_binch5_bin15[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+============================================================
+Analyzing bin errors for: prop_binch6
+Poisson cut-off: 0
+============================================================
+Bin        Contents        Error           Notes                         
+0          47.881845       3.418868        total sum                     
+0          196.000000      14.000000       Unweighted events, alpha=0.244295
+  => Total parameter prop_binch6_bin0[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+1          16.643652       0.992057        total sum                     
+1          281.000000      16.763055       Unweighted events, alpha=0.059230
+  => Total parameter prop_binch6_bin1[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+2          10.385538       0.885532        total sum                     
+2          138.000000      11.747340       Unweighted events, alpha=0.075258
+  => Total parameter prop_binch6_bin2[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+3          4.509928        0.374947        total sum                     
+3          145.000000      12.041595       Unweighted events, alpha=0.031103
+  => Total parameter prop_binch6_bin3[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+============================================================
+Analyzing bin errors for: prop_binch7
+Poisson cut-off: 0
+============================================================
+Bin        Contents        Error           Notes                         
+0          5.171603        1.137321        total sum                     
+0          21.000000       4.582576        Unweighted events, alpha=0.246267
+  => Total parameter prop_binch7_bin0[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+1          1.661544        0.251715        total sum                     
+1          44.000000       6.633250        Unweighted events, alpha=0.037762
+  => Total parameter prop_binch7_bin1[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+2          1.697821        4.577875        total sum                     
+2          0.000000        0.000000        Unweighted events, alpha=inf  
+  => Number of weighted events is below Poisson threshold
+    sm                   0.915925        0.047328                                      
+                         375.000000      19.364917       Unweighted events, alpha=0.002442
+      => Parameter prop_binch7_bin2_sm[0.00,-7.00,7.00] to be Gaussian constrained
+  ----------------------------------------------------------
+    QCDSSWW              0.039503        0.008442                                      
+                         22.000000       4.690416        Unweighted events, alpha=0.001796
+      => Parameter prop_binch7_bin2_QCDSSWW[0.00,-7.00,7.00] to be Gaussian constrained
+  ----------------------------------------------------------
+    EWKWZ                0.064792        0.014279                                      
+                         21.000000       4.582576        Unweighted events, alpha=0.003085
+      => Parameter prop_binch7_bin2_EWKWZ[0.00,-7.00,7.00] to be Gaussian constrained
+  ----------------------------------------------------------
+    WZ                   0.073580        0.048548                                      
+                         2.000000        1.414214        Unweighted events, alpha=0.036790
+      => Parameter prop_binch7_bin2_WZ[0.00,-7.00,7.00] to be Gaussian constrained
+  ----------------------------------------------------------
+    ZZ                   0.001561        0.000485                                      
+                         10.000000       3.162278        Unweighted events, alpha=0.000156
+      => Parameter prop_binch7_bin2_ZZ[0.00,-7.00,7.00] to be Gaussian constrained
+  ----------------------------------------------------------
+    NonPrompt            0.573727        0.213129                                      
+                         7.000000        2.645751        Unweighted events, alpha=0.081961
+      => Parameter prop_binch7_bin2_NonPrompt[0.00,-7.00,7.00] to be Gaussian constrained
+  ----------------------------------------------------------
+    VVV                  0.028693        0.016358                                      
+                         3.000000        1.732051        Unweighted events, alpha=0.009564
+      => Parameter prop_binch7_bin2_VVV[0.00,-7.00,7.00] to be Gaussian constrained
+  ----------------------------------------------------------
+    TVX                  0.000040        0.000024                                      
+                         3.000000        1.732051        Unweighted events, alpha=0.000013
+      => Parameter prop_binch7_bin2_TVX[0.00,-7.00,7.00] to be Gaussian constrained
+  ----------------------------------------------------------
+    VG                   0.000000        0.009285                                      
+      => Poisson not viable, prop_binch7_bin2_VG[0.00,-7.00,7.00] to be Gaussian constrained
+  ----------------------------------------------------------
+    WS                   0.000000        4.572340                                      
+      => Poisson not viable, prop_binch7_bin2_WS[0.00,-7.00,7.00] to be Gaussian constrained
+  ----------------------------------------------------------
+    sm_lin_quad_cM0      0.916430        0.047328                                      
+                         375.000000      19.364917       Unweighted events, alpha=0.002444
+      => Parameter prop_binch7_bin2_sm_lin_quad_cM0[0.00,-7.00,7.00] to be Gaussian constrained
+  ----------------------------------------------------------
+    quad_cM0             0.000000        0.000000                                      
+      => Error is zero, ignore      
+  ----------------------------------------------------------
+------------------------------------------------------------
+3          1.369141        0.228698        total sum                     
+3          36.000000       6.000000        Unweighted events, alpha=0.038032
+  => Total parameter prop_binch7_bin3[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+4          4.237232        0.546041        total sum                     
+4          60.000000       7.745967        Unweighted events, alpha=0.070621
+  => Total parameter prop_binch7_bin4[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+5          2.752122        0.403319        total sum                     
+5          47.000000       6.855655        Unweighted events, alpha=0.058556
+  => Total parameter prop_binch7_bin5[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+6          1.569174        0.213018        total sum                     
+6          54.000000       7.348469        Unweighted events, alpha=0.029059
+  => Total parameter prop_binch7_bin6[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+7          1.681548        0.212297        total sum                     
+7          63.000000       7.937254        Unweighted events, alpha=0.026691
+  => Total parameter prop_binch7_bin7[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+8          3.028074        0.422138        total sum                     
+8          51.000000       7.141428        Unweighted events, alpha=0.059374
+  => Total parameter prop_binch7_bin8[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+9          1.643999        0.255384        total sum                     
+9          41.000000       6.403124        Unweighted events, alpha=0.040098
+  => Total parameter prop_binch7_bin9[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+10         1.233436        0.135402        total sum                     
+10         83.000000       9.110434        Unweighted events, alpha=0.014861
+  => Total parameter prop_binch7_bin10[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+11         1.042012        0.075991        total sum                     
+11         188.000000      13.711309       Unweighted events, alpha=0.005543
+  => Total parameter prop_binch7_bin11[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+12         3.452955        0.497915        total sum                     
+12         48.000000       6.928203        Unweighted events, alpha=0.071937
+  => Total parameter prop_binch7_bin12[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+13         1.496922        0.226967        total sum                     
+13         43.000000       6.557439        Unweighted events, alpha=0.034812
+  => Total parameter prop_binch7_bin13[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+14         1.363330        0.229626        total sum                     
+14         35.000000       5.916080        Unweighted events, alpha=0.038952
+  => Total parameter prop_binch7_bin14[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+15         1.224202        0.119255        total sum                     
+15         105.000000      10.246951       Unweighted events, alpha=0.011659
+  => Total parameter prop_binch7_bin15[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+============================================================
+Analyzing bin errors for: prop_binch8
+Poisson cut-off: 0
+============================================================
+Bin        Contents        Error           Notes                         
+0          26.883372       7.284269        total sum                     
+0          14.000000       3.741657        Unweighted events, alpha=1.920241
+  => Total parameter prop_binch8_bin0[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+1          9.013643        0.894784        total sum                     
+1          101.000000      10.049876       Unweighted events, alpha=0.089244
+  => Total parameter prop_binch8_bin1[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+2          5.357622        0.517004        total sum                     
+2          107.000000      10.344080       Unweighted events, alpha=0.050071
+  => Total parameter prop_binch8_bin2[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+3          2.955472        0.335487        total sum                     
+3          78.000000       8.831761        Unweighted events, alpha=0.037891
+  => Total parameter prop_binch8_bin3[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+============================================================
+Analyzing bin errors for: prop_binch9
+Poisson cut-off: 0
+============================================================
+Bin        Contents        Error           Notes                         
+0          36.889353       4.527500        total sum                     
+0          66.000000       8.124038        Unweighted events, alpha=0.558930
+  => Total parameter prop_binch9_bin0[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+1          17.523909       0.928897        total sum                     
+1          356.000000      18.867962       Unweighted events, alpha=0.049224
+  => Total parameter prop_binch9_bin1[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+2          16.300774       1.229229        total sum                     
+2          176.000000      13.266499       Unweighted events, alpha=0.092618
+  => Total parameter prop_binch9_bin2[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+3          11.162236       0.454963        total sum                     
+3          602.000000      24.535688       Unweighted events, alpha=0.018542
+  => Total parameter prop_binch9_bin3[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+4          36.322923       1.954004        total sum                     
+4          346.000000      18.601075       Unweighted events, alpha=0.104980
+  => Total parameter prop_binch9_bin4[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+5          20.361748       1.025330        total sum                     
+5          394.000000      19.849433       Unweighted events, alpha=0.051680
+  => Total parameter prop_binch9_bin5[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+6          18.542805       1.313362        total sum                     
+6          199.000000      14.106736       Unweighted events, alpha=0.093180
+  => Total parameter prop_binch9_bin6[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+7          14.040530       0.366663        total sum                     
+7          1466.000000     38.288379       Unweighted events, alpha=0.009577
+  => Total parameter prop_binch9_bin7[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+8          29.985007       2.011478        total sum                     
+8          222.000000      14.899664       Unweighted events, alpha=0.135068
+  => Total parameter prop_binch9_bin8[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+9          17.735550       1.515274        total sum                     
+9          137.000000      11.704700       Unweighted events, alpha=0.129457
+  => Total parameter prop_binch9_bin9[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+10         15.852617       1.661008        total sum                     
+10         91.000000       9.539392        Unweighted events, alpha=0.174205
+  => Total parameter prop_binch9_bin10[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+11         11.989539       0.284820        total sum                     
+11         1772.000000     42.095130       Unweighted events, alpha=0.006766
+  => Total parameter prop_binch9_bin11[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+12         24.050650       0.975941        total sum                     
+12         607.000000      24.637370       Unweighted events, alpha=0.039622
+  => Total parameter prop_binch9_bin12[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+13         16.053788       0.757509        total sum                     
+13         449.000000      21.189620       Unweighted events, alpha=0.035755
+  => Total parameter prop_binch9_bin13[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+14         16.316283       1.860871        total sum                     
+14         77.000000       8.774964        Unweighted events, alpha=0.211900
+  => Total parameter prop_binch9_bin14[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+15         14.005405       0.305856        total sum                     
+15         2097.000000     45.793013       Unweighted events, alpha=0.006679
+  => Total parameter prop_binch9_bin15[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+============================================================
+Analyzing bin errors for: prop_binch10
+Poisson cut-off: 0
+============================================================
+Bin        Contents        Error           Notes                         
+0          173.791950      8.912821        total sum                     
+0          380.000000      19.493589       Unweighted events, alpha=0.457347
+  => Total parameter prop_binch10_bin0[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+1          65.469416       3.126442        total sum                     
+1          439.000000      20.952327       Unweighted events, alpha=0.149133
+  => Total parameter prop_binch10_bin1[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+2          38.711344       1.195974        total sum                     
+2          1048.000000     32.372828       Unweighted events, alpha=0.036938
+  => Total parameter prop_binch10_bin2[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+3          19.788981       0.742459        total sum                     
+3          710.000000      26.645825       Unweighted events, alpha=0.027872
+  => Total parameter prop_binch10_bin3[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+============================================================
+Analyzing bin errors for: prop_binch11
+Poisson cut-off: 0
+============================================================
+Bin        Contents        Error           Notes                         
+0          41.935942       4.354824        total sum                     
+0          93.000000       9.643651        Unweighted events, alpha=0.450924
+  => Total parameter prop_binch11_bin0[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+1          20.936089       1.908104        total sum                     
+1          120.000000      10.954451       Unweighted events, alpha=0.174467
+  => Total parameter prop_binch11_bin1[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+2          17.172104       1.397827        total sum                     
+2          151.000000      12.288206       Unweighted events, alpha=0.113723
+  => Total parameter prop_binch11_bin2[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+3          11.902960       0.527728        total sum                     
+3          509.000000      22.561028       Unweighted events, alpha=0.023385
+  => Total parameter prop_binch11_bin3[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+4          40.367547       2.233674        total sum                     
+4          327.000000      18.083141       Unweighted events, alpha=0.123448
+  => Total parameter prop_binch11_bin4[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+5          21.162403       1.135509        total sum                     
+5          347.000000      18.627936       Unweighted events, alpha=0.060987
+  => Total parameter prop_binch11_bin5[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+6          19.144941       1.484631        total sum                     
+6          166.000000      12.884099       Unweighted events, alpha=0.115331
+  => Total parameter prop_binch11_bin6[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+7          13.460771       0.350400        total sum                     
+7          1476.000000     38.418745       Unweighted events, alpha=0.009120
+  => Total parameter prop_binch11_bin7[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+8          28.542008       2.546211        total sum                     
+8          126.000000      11.224972       Unweighted events, alpha=0.226524
+  => Total parameter prop_binch11_bin8[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+9          19.795027       1.783724        total sum                     
+9          123.000000      11.090537       Unweighted events, alpha=0.160935
+  => Total parameter prop_binch11_bin9[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+10         15.792420       1.976315        total sum                     
+10         64.000000       8.000000        Unweighted events, alpha=0.246757
+  => Total parameter prop_binch11_bin10[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+11         12.138566       0.371345        total sum                     
+11         1069.000000     32.695565       Unweighted events, alpha=0.011355
+  => Total parameter prop_binch11_bin11[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+12         26.678158       1.253945        total sum                     
+12         453.000000      21.283797       Unweighted events, alpha=0.058892
+  => Total parameter prop_binch11_bin12[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+13         16.130927       0.757269        total sum                     
+13         454.000000      21.307276       Unweighted events, alpha=0.035531
+  => Total parameter prop_binch11_bin13[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+14         17.160913       2.406309        total sum                     
+14         51.000000       7.141428        Unweighted events, alpha=0.336488
+  => Total parameter prop_binch11_bin14[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+15         14.563565       0.413538        total sum                     
+15         1240.000000     35.213634       Unweighted events, alpha=0.011745
+  => Total parameter prop_binch11_bin15[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+============================================================
+Analyzing bin errors for: prop_binch12
+Poisson cut-off: 0
+============================================================
+Bin        Contents        Error           Notes                         
+0          217.097812      13.333042       total sum                     
+0          265.000000      16.278821       Unweighted events, alpha=0.819237
+  => Total parameter prop_binch12_bin0[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+1          79.719858       3.961632        total sum                     
+1          405.000000      20.124612       Unweighted events, alpha=0.196839
+  => Total parameter prop_binch12_bin1[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+2          42.869075       1.466255        total sum                     
+2          855.000000      29.240383       Unweighted events, alpha=0.050139
+  => Total parameter prop_binch12_bin2[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+3          20.476859       0.842355        total sum                     
+3          591.000000      24.310492       Unweighted events, alpha=0.034648
+  => Total parameter prop_binch12_bin3[0.00,-7.00,7.00] to be Gaussian constrained
+------------------------------------------------------------
+ Operators =  ['cG', 'cGtil', 'cH', 'cHB', 'cHBtil', 'cHDD', 'cHG', 'cHGtil', 'cHW', 'cHWB', 'cHWBtil', 'cHWtil', 'cHbox', 'cHd', 'cHe', 'cHl1', 'cHl3', 'cHq1', 'cHq3', 'cHu', 'cHudAbs', 'cHudPh', 'cW', 'cWtil', 'cdBAbs', 'cdBPh', 'cdGAbs', 'cdGPh', 'cdHAbs', 'cdHPh', 'cdWAbs', 'cdWPh', 'cdd', 'cdd1', 'ceBAbs', 'ceBPh', 'ceHAbs', 'ceHPh', 'ceWAbs', 'ceWPh', 'ced', 'cee', 'ceu', 'cld', 'cle', 'cledqAbs', 'cledqPh', 'clequ1Abs', 'clequ1Ph', 'clequ3Abs', 'clequ3Ph', 'cll', 'cll1', 'clq1', 'clq3', 'clu', 'cqd1', 'cqd8', 'cqe', 'cqq1', 'cqq11', 'cqq3', 'cqq31', 'cqu1', 'cqu8', 'cquqd1Abs', 'cquqd1Ph', 'cquqd8Abs', 'cquqd8Ph', 'cuBAbs', 'cuBPh', 'cuGAbs', 'cuGPh', 'cuHAbs', 'cuHPh', 'cuWAbs', 'cuWPh', 'cud1', 'cud8', 'cuu', 'cuu1', 'cjj11', 'cjj18', 'cjj31', 'cjj38', 'cHj1', 'cHQ1']
+ Operators =  ['cM0']
+ reuseCompleteDatacards =  True
+ parameters of interest =  r,k_cM0
+ self.numOperators =  1
+Channel ch1 will use autoMCStats with settings: event-threshold=0, include-signal=0, hist-mode=1
+Channel ch2 will use autoMCStats with settings: event-threshold=0, include-signal=0, hist-mode=1
+Channel ch3 will use autoMCStats with settings: event-threshold=0, include-signal=0, hist-mode=1
+Channel ch4 will use autoMCStats with settings: event-threshold=0, include-signal=0, hist-mode=1
+Channel ch5 will use autoMCStats with settings: event-threshold=0, include-signal=0, hist-mode=1
+Channel ch6 will use autoMCStats with settings: event-threshold=0, include-signal=0, hist-mode=1
+Channel ch7 will use autoMCStats with settings: event-threshold=0, include-signal=0, hist-mode=1
+Channel ch8 will use autoMCStats with settings: event-threshold=0, include-signal=0, hist-mode=1
+Channel ch9 will use autoMCStats with settings: event-threshold=0, include-signal=0, hist-mode=1
+Channel ch10 will use autoMCStats with settings: event-threshold=0, include-signal=0, hist-mode=1
+Channel ch11 will use autoMCStats with settings: event-threshold=0, include-signal=0, hist-mode=1
+Channel ch12 will use autoMCStats with settings: event-threshold=0, include-signal=0, hist-mode=1
+Workspace Done 
+  <<< Combine >>> 
+ <<< v10.2.1 >>>
+>>> Random number generator seed is 123456
+>>> Method used is MultiDimFit
+ModelConfig 'ModelConfig' defines more than one parameter of interest. This is not supported in some statistical methods.
+Done in 144.17 min (cpu), 145.42 min (real)
+ Expected Fit Done 
+  <<< Combine >>> 
+ <<< v10.2.1 >>>
+>>> Random number generator seed is 123456
+>>> Method used is MultiDimFit
+ModelConfig 'ModelConfig' defines more than one parameter of interest. This is not supported in some statistical methods.
+Done in 136.14 min (cpu), 137.32 min (real)
+ Observed Fit Done 
+ Info in <TCanvas::MakeDefCanvas>:  created default TCanvas with name c1
+Info in <TCanvas::Print>: png file plots/1200/scan_M0linear.png has been created
+Info in <TCanvas::Print>: pdf file plots/1200/scan_M0linear.pdf has been created
+@ @ @ WARNING @ @ @: returning graph x-axis range limits
+@ @ @ WARNING @ @ @: returning graph x-axis range limits
+Main scan 68.27% C.L (1 s.d.)  k_cM0<1: [-17.991000366210937, 17.991000366210937] --> 0.007+17.984-17.999
+Main scan 95.45% C.L (2 s.d.)  k_cM0<4: [-17.991000366210937, 17.991000366210937] --> 0.007+17.984-17.999
+@ @ @ WARNING @ @ @: returning graph x-axis higher limit
+Observed scan 68.27% C.L (1 s.d.)  k_cM0<1: [-14.580771463623885, 17.991000366210937] --> -14.993+32.984-0.412
+Observed scan 95.45% C.L (2 s.d.)  k_cM0<4: [-13.334849347570477, 14.393341972869784] --> -14.993+29.386-1.658
