@@ -1,89 +1,72 @@
 Combine cards Done 
- Error in <TFile::TFile>: file /mnt/home/mghimiray/VBSStudies/Outputs_EFT/OriginalTT/1001/1500/datacards/output_sswwAnalysis1001_M7_20220_bin0.root does not exist
- Operators =  ['cG', 'cGtil', 'cH', 'cHB', 'cHBtil', 'cHDD', 'cHG', 'cHGtil', 'cHW', 'cHWB', 'cHWBtil', 'cHWtil', 'cHbox', 'cHd', 'cHe', 'cHl1', 'cHl3', 'cHq1', 'cHq3', 'cHu', 'cHudAbs', 'cHudPh', 'cW', 'cWtil', 'cdBAbs', 'cdBPh', 'cdGAbs', 'cdGPh', 'cdHAbs', 'cdHPh', 'cdWAbs', 'cdWPh', 'cdd', 'cdd1', 'ceBAbs', 'ceBPh', 'ceHAbs', 'ceHPh', 'ceWAbs', 'ceWPh', 'ced', 'cee', 'ceu', 'cld', 'cle', 'cledqAbs', 'cledqPh', 'clequ1Abs', 'clequ1Ph', 'clequ3Abs', 'clequ3Ph', 'cll', 'cll1', 'clq1', 'clq3', 'clu', 'cqd1', 'cqd8', 'cqe', 'cqq1', 'cqq11', 'cqq3', 'cqq31', 'cqu1', 'cqu8', 'cquqd1Abs', 'cquqd1Ph', 'cquqd8Abs', 'cquqd8Ph', 'cuBAbs', 'cuBPh', 'cuGAbs', 'cuGPh', 'cuHAbs', 'cuHPh', 'cuWAbs', 'cuWPh', 'cud1', 'cud8', 'cuu', 'cuu1', 'cjj11', 'cjj18', 'cjj31', 'cjj38', 'cHj1', 'cHQ1']
- Operators =  ['cM7']
+ Error in <TUnixSystem::WorkingDirectory>: getcwd() failed
 Traceback (most recent call last):
-  File "/eos/home-m/mghimira/Combine/CMSSW_14_1_4/bin/el9_amd64_gcc12/text2workspace.py", line 103, in <module>
-    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
-  File "/eos/home-m/mghimira/Combine/CMSSW_14_1_4/src/HiggsAnalysis/CombinedLimit/python/ModelTools.py", line 169, in doModel
-    self.doObservables()
-  File "/eos/home-m/mghimira/Combine/CMSSW_14_1_4/src/HiggsAnalysis/CombinedLimit/python/ShapeTools.py", line 82, in doObservables
-    self.prepareAllShapes()
-  File "/eos/home-m/mghimira/Combine/CMSSW_14_1_4/src/HiggsAnalysis/CombinedLimit/python/ShapeTools.py", line 477, in prepareAllShapes
-    shape = self.getShape(b, p)
-  File "/eos/home-m/mghimira/Combine/CMSSW_14_1_4/src/HiggsAnalysis/CombinedLimit/python/ShapeTools.py", line 711, in getShape
-    file = self._fileCache[finalNames[0]]
-  File "/eos/home-m/mghimira/Combine/CMSSW_14_1_4/src/HiggsAnalysis/CombinedLimit/python/ShapeTools.py", line 54, in __getitem__
-    filehandle = ROOT.TFile.Open(trueFName)
-  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/lcg/root/6.30.09-3de410abaee49ca44c9accc4e505a619/lib/ROOT/_pythonization/_tfile.py", line 103, in _TFileOpen
-    raise OSError('Failed to open file {}'.format(str(args[0])))
-OSError: Failed to open file /mnt/home/mghimiray/VBSStudies/Outputs_EFT/OriginalTT/1001/1500/datacards/output_sswwAnalysis1001_M7_20220_bin0.root
+  File "/eos/home-m/mghimira/Combine/CMSSW_14_1_4/bin/el9_amd64_gcc12/text2workspace.py", line 11, in <module>
+    from HiggsAnalysis.CombinedLimit.ShapeTools import *
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/lcg/root/6.30.09-3de410abaee49ca44c9accc4e505a619/lib/ROOT/_facade.py", line 154, in _importhook
+    return _orig_ihook(name, *args, **kwds)
+  File "/eos/home-m/mghimira/Combine/CMSSW_14_1_4/src/HiggsAnalysis/CombinedLimit/python/ShapeTools.py", line 13, in <module>
+    RooArgSet_add_original = ROOT.RooArgSet.add
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/lcg/root/6.30.09-3de410abaee49ca44c9accc4e505a619/lib/ROOT/_facade.py", line 224, in _getattr
+    self._finalSetup()
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/lcg/root/6.30.09-3de410abaee49ca44c9accc4e505a619/lib/ROOT/_facade.py", line 217, in _finalSetup
+    self._run_rootlogon()
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/lcg/root/6.30.09-3de410abaee49ca44c9accc4e505a619/lib/ROOT/_facade.py", line 254, in _run_rootlogon
+    file_path_local = os.path.join(os.getcwd(), '.rootlogon.py')
+FileNotFoundError: [Errno 2] No such file or directory
 Workspace Done 
-  <<< Combine >>> 
+ <UnknownClass::WorkingDirectory>: getcwd() failed
+Error in <UnknownClass::WorkingDirectory>: getcwd() failed
+Error in <UnknownClass::WorkingDirectory>: getcwd() failed
+ <<< Combine >>> 
  <<< v10.2.1 >>>
 >>> Random number generator seed is 123456
 >>> Method used is MultiDimFit
-Error when running the combination:
-	File /eos/home-m/mghimira/Combine/CMSSW_14_1_4/src/HiggsAnalysis/AnalyticAnomalousCoupling/SMP-25-013/workspace/1500/workspace_sswwAnalysis1001_M7_2027.root does not exist
+shell-init: error retrieving current directory: getcwd: cannot access parent directories: No such file or directory
+Error in <UnknownClass::WorkingDirectory>: getcwd() failed
+Error in <UnknownClass::WorkingDirectory>: getcwd() failed
+Error in <UnknownClass::WorkingDirectory>: getcwd() failed
+Error in <UnknownClass::WorkingDirectory>: getcwd() failed
+Error in <UnknownClass::WorkingDirectory>: getcwd() failed
+shell-init: error retrieving current directory: getcwd: cannot access parent directories: No such file or directory
+Could not get current working directory: No such file or directory
+LLVM ERROR: out of memory
+Allocation failed
+./makeCards.sh: line 63: 4131669 Aborted                 combine -M MultiDimFit workspace/${cutoff}/workspace_${SSWWANA}_${operator}_2027.root --algo=grid --points 2000 -m 125 -t -1 --redefineSignalPOIs k_c${operator} --freezeParameters r --setParameters r=1 --setParameterRanges k_c${operator}=-17,17 -n _Expected_${operator}${cutoff} --verbose -1
+mv: cannot stat 'higgsCombine_Expected_M71500.MultiDimFit.mH125.root': No such file or directory
  Expected Fit Done 
-  <<< Combine >>> 
+ <UnknownClass::WorkingDirectory>: getcwd() failed
+Error in <UnknownClass::WorkingDirectory>: getcwd() failed
+Error in <UnknownClass::WorkingDirectory>: getcwd() failed
+ <<< Combine >>> 
  <<< v10.2.1 >>>
 >>> Random number generator seed is 123456
 >>> Method used is MultiDimFit
-Error when running the combination:
-	File /eos/home-m/mghimira/Combine/CMSSW_14_1_4/src/HiggsAnalysis/AnalyticAnomalousCoupling/SMP-25-013/workspace/1500/workspace_sswwAnalysis1001_M7_2027.root does not exist
+shell-init: error retrieving current directory: getcwd: cannot access parent directories: No such file or directory
+Error in <UnknownClass::WorkingDirectory>: getcwd() failed
+Error in <UnknownClass::WorkingDirectory>: getcwd() failed
+Error in <UnknownClass::WorkingDirectory>: getcwd() failed
+Error in <UnknownClass::WorkingDirectory>: getcwd() failed
+Error in <UnknownClass::WorkingDirectory>: getcwd() failed
+shell-init: error retrieving current directory: getcwd: cannot access parent directories: No such file or directory
+Could not get current working directory: No such file or directory
+LLVM ERROR: out of memory
+Allocation failed
+./makeCards.sh: line 63: 4132875 Aborted                 combine -M MultiDimFit workspace/${cutoff}/workspace_${SSWWANA}_${operator}_2027.root --algo=grid --points 2000 -m 125 --redefineSignalPOIs k_c${operator} --freezeParameters r --setParameters r=1 --setParameterRanges k_c${operator}=-17,17 -n _Observed_${operator}${cutoff} --verbose -1
+mv: cannot stat 'higgsCombine_Observed_M71500.MultiDimFit.mH125.root': No such file or directory
  Observed Fit Done 
- Error in <TFile::TFile>: file /eos/home-m/mghimira/Combine/CMSSW_14_1_4/src/HiggsAnalysis/AnalyticAnomalousCoupling/SMP-25-013/fits/1500/higgsCombine_Expected_M7.MultiDimFit.mH125.root does not exist
-Traceback (most recent call last):
-  File "/eos/home-m/mghimira/Combine/CMSSW_14_1_4/src/HiggsAnalysis/AnalyticAnomalousCoupling/scripts/mkEFTScan.py", line 172, in <module>
-    gs = scanUtil.getScan()
-  File "/eos/home-m/mghimira/Combine/CMSSW_14_1_4/src/HiggsAnalysis/AnalyticAnomalousCoupling/python/utils/scan.py", line 40, in getScan
-    f = ROOT.TFile(self.file)
-  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/lcg/root/6.30.09-3de410abaee49ca44c9accc4e505a619/lib/ROOT/_pythonization/_tfile.py", line 90, in _TFileConstructor
-    raise OSError('Failed to open file {}'.format(args[0]))
-OSError: Failed to open file fits/1500/higgsCombine_Expected_M7.MultiDimFit.mH125.root
-Combine cards Done 
- Error in <TFile::TFile>: file /mnt/home/mghimiray/VBSStudies/Outputs_EFT/OriginalTT/1001/1500/datacards/output_sswwAnalysis1001_M7_20220_bin0.root does not exist
- Operators =  ['cG', 'cGtil', 'cH', 'cHB', 'cHBtil', 'cHDD', 'cHG', 'cHGtil', 'cHW', 'cHWB', 'cHWBtil', 'cHWtil', 'cHbox', 'cHd', 'cHe', 'cHl1', 'cHl3', 'cHq1', 'cHq3', 'cHu', 'cHudAbs', 'cHudPh', 'cW', 'cWtil', 'cdBAbs', 'cdBPh', 'cdGAbs', 'cdGPh', 'cdHAbs', 'cdHPh', 'cdWAbs', 'cdWPh', 'cdd', 'cdd1', 'ceBAbs', 'ceBPh', 'ceHAbs', 'ceHPh', 'ceWAbs', 'ceWPh', 'ced', 'cee', 'ceu', 'cld', 'cle', 'cledqAbs', 'cledqPh', 'clequ1Abs', 'clequ1Ph', 'clequ3Abs', 'clequ3Ph', 'cll', 'cll1', 'clq1', 'clq3', 'clu', 'cqd1', 'cqd8', 'cqe', 'cqq1', 'cqq11', 'cqq3', 'cqq31', 'cqu1', 'cqu8', 'cquqd1Abs', 'cquqd1Ph', 'cquqd8Abs', 'cquqd8Ph', 'cuBAbs', 'cuBPh', 'cuGAbs', 'cuGPh', 'cuHAbs', 'cuHPh', 'cuWAbs', 'cuWPh', 'cud1', 'cud8', 'cuu', 'cuu1', 'cjj11', 'cjj18', 'cjj31', 'cjj38', 'cHj1', 'cHQ1']
- Operators =  ['cM7']
- reuseCompleteDatacards =  True
-Traceback (most recent call last):
-  File "/eos/home-m/mghimira/Combine/CMSSW_14_1_4/bin/el9_amd64_gcc12/text2workspace.py", line 103, in <module>
-    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
-  File "/eos/home-m/mghimira/Combine/CMSSW_14_1_4/src/HiggsAnalysis/CombinedLimit/python/ModelTools.py", line 169, in doModel
-    self.doObservables()
-  File "/eos/home-m/mghimira/Combine/CMSSW_14_1_4/src/HiggsAnalysis/CombinedLimit/python/ShapeTools.py", line 82, in doObservables
-    self.prepareAllShapes()
-  File "/eos/home-m/mghimira/Combine/CMSSW_14_1_4/src/HiggsAnalysis/CombinedLimit/python/ShapeTools.py", line 477, in prepareAllShapes
-    shape = self.getShape(b, p)
-  File "/eos/home-m/mghimira/Combine/CMSSW_14_1_4/src/HiggsAnalysis/CombinedLimit/python/ShapeTools.py", line 711, in getShape
-    file = self._fileCache[finalNames[0]]
-  File "/eos/home-m/mghimira/Combine/CMSSW_14_1_4/src/HiggsAnalysis/CombinedLimit/python/ShapeTools.py", line 54, in __getitem__
-    filehandle = ROOT.TFile.Open(trueFName)
-  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/lcg/root/6.30.09-3de410abaee49ca44c9accc4e505a619/lib/ROOT/_pythonization/_tfile.py", line 103, in _TFileOpen
-    raise OSError('Failed to open file {}'.format(str(args[0])))
-OSError: Failed to open file /mnt/home/mghimiray/VBSStudies/Outputs_EFT/OriginalTT/1001/1500/datacards/output_sswwAnalysis1001_M7_20220_bin0.root
-Workspace Done 
-  <<< Combine >>> 
- <<< v10.2.1 >>>
->>> Random number generator seed is 123456
->>> Method used is MultiDimFit
-Error when running the combination:
-	File /eos/home-m/mghimira/Combine/CMSSW_14_1_4/src/HiggsAnalysis/AnalyticAnomalousCoupling/SMP-25-013/workspace/1500/workspace_sswwAnalysis1001_M7linear_2027.root does not exist
- Expected Fit Done 
-  <<< Combine >>> 
- <<< v10.2.1 >>>
->>> Random number generator seed is 123456
->>> Method used is MultiDimFit
-Error when running the combination:
-	File /eos/home-m/mghimira/Combine/CMSSW_14_1_4/src/HiggsAnalysis/AnalyticAnomalousCoupling/SMP-25-013/workspace/1500/workspace_sswwAnalysis1001_M7linear_2027.root does not exist
- Observed Fit Done 
- Error in <TFile::TFile>: file /eos/home-m/mghimira/Combine/CMSSW_14_1_4/src/HiggsAnalysis/AnalyticAnomalousCoupling/SMP-25-013/fits/1500/higgsCombine_Expected_M7linear.MultiDimFit.mH125.root does not exist
-Traceback (most recent call last):
-  File "/eos/home-m/mghimira/Combine/CMSSW_14_1_4/src/HiggsAnalysis/AnalyticAnomalousCoupling/scripts/mkEFTScan.py", line 172, in <module>
-    gs = scanUtil.getScan()
-  File "/eos/home-m/mghimira/Combine/CMSSW_14_1_4/src/HiggsAnalysis/AnalyticAnomalousCoupling/python/utils/scan.py", line 40, in getScan
-    f = ROOT.TFile(self.file)
-  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/lcg/root/6.30.09-3de410abaee49ca44c9accc4e505a619/lib/ROOT/_pythonization/_tfile.py", line 90, in _TFileConstructor
-    raise OSError('Failed to open file {}'.format(args[0]))
-OSError: Failed to open file fits/1500/higgsCombine_Expected_M7linear.MultiDimFit.mH125.root
+ <UnknownClass::WorkingDirectory>: getcwd() failed
+Error in <UnknownClass::WorkingDirectory>: getcwd() failed
+Error in <UnknownClass::WorkingDirectory>: getcwd() failed
+shell-init: error retrieving current directory: getcwd: cannot access parent directories: No such file or directory
+Error in <UnknownClass::WorkingDirectory>: getcwd() failed
+Error in <UnknownClass::WorkingDirectory>: getcwd() failed
+Error in <UnknownClass::WorkingDirectory>: getcwd() failed
+Error in <UnknownClass::WorkingDirectory>: getcwd() failed
+Error in <UnknownClass::WorkingDirectory>: getcwd() failed
+shell-init: error retrieving current directory: getcwd: cannot access parent directories: No such file or directory
+Could not get current working directory: No such file or directory
+LLVM ERROR: out of memory
+Allocation failed
+./makeCards.sh: line 63: 4133293 Aborted                 python3 $CMSSW_BASE/src/HiggsAnalysis/AnalyticAnomalousCoupling/scripts/mkEFTScan.py fits/${cutoff}/higgsCombine_Expected_${operator}${cutoff}.MultiDimFit.mH125.root -p k_c${operator} -maxNLL 9 -ml Expected -others fits/${cutoff}/higgsCombine_Observed_${operator}${cutoff}.MultiDimFit.mH125.root:2:1:Observed -cms -preliminary -lumi "107" -xlabel "f_{${operator}}" -o plots/${cutoff}/scan_${operator}${cutoff}
+./makeCardslinear.sh: line 65: 4133266 Aborted                 (core dumped) python3 $CMSSW_BASE/src/HiggsAnalysis/AnalyticAnomalousCoupling/scripts/mkEFTScan.py fits/${cutoff}/higgsCombine_Expected_${operator}${cutoff}linear.MultiDimFit.mH125.root -p k_c${operator} -maxNLL 9 -ml Expected -others fits/${cutoff}/higgsCombine_Observed_${operator}${cutoff}linear.MultiDimFit.mH125.root:2:1:Observed -cms -preliminary -lumi "107" -xlabel "f_{${operator}}" -o plots/${cutoff}/scan_${operator}${cutoff}linear

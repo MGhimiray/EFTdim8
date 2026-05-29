@@ -1,0 +1,71 @@
+Combine cards Done 
+ Error in <TUnixSystem::WorkingDirectory>: getcwd() failed
+Traceback (most recent call last):
+  File "/eos/home-m/mghimira/Combine/CMSSW_14_1_4/bin/el9_amd64_gcc12/text2workspace.py", line 11, in <module>
+    from HiggsAnalysis.CombinedLimit.ShapeTools import *
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/lcg/root/6.30.09-3de410abaee49ca44c9accc4e505a619/lib/ROOT/_facade.py", line 154, in _importhook
+    return _orig_ihook(name, *args, **kwds)
+  File "/eos/home-m/mghimira/Combine/CMSSW_14_1_4/src/HiggsAnalysis/CombinedLimit/python/ShapeTools.py", line 13, in <module>
+    RooArgSet_add_original = ROOT.RooArgSet.add
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/lcg/root/6.30.09-3de410abaee49ca44c9accc4e505a619/lib/ROOT/_facade.py", line 224, in _getattr
+    self._finalSetup()
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/lcg/root/6.30.09-3de410abaee49ca44c9accc4e505a619/lib/ROOT/_facade.py", line 217, in _finalSetup
+    self._run_rootlogon()
+  File "/cvmfs/cms.cern.ch/el9_amd64_gcc12/lcg/root/6.30.09-3de410abaee49ca44c9accc4e505a619/lib/ROOT/_facade.py", line 254, in _run_rootlogon
+    file_path_local = os.path.join(os.getcwd(), '.rootlogon.py')
+FileNotFoundError: [Errno 2] No such file or directory
+Workspace Done 
+ <UnknownClass::WorkingDirectory>: getcwd() failed
+Error in <UnknownClass::WorkingDirectory>: getcwd() failed
+Error in <UnknownClass::WorkingDirectory>: getcwd() failed
+ <<< Combine >>> 
+ <<< v10.2.1 >>>
+>>> Random number generator seed is 123456
+>>> Method used is MultiDimFit
+shell-init: error retrieving current directory: getcwd: cannot access parent directories: No such file or directory
+Error in <UnknownClass::WorkingDirectory>: getcwd() failed
+Error in <UnknownClass::WorkingDirectory>: getcwd() failed
+Error in <UnknownClass::WorkingDirectory>: getcwd() failed
+Error in <UnknownClass::WorkingDirectory>: getcwd() failed
+Error in <UnknownClass::WorkingDirectory>: getcwd() failed
+shell-init: error retrieving current directory: getcwd: cannot access parent directories: No such file or directory
+Could not get current working directory: No such file or directory
+LLVM ERROR: out of memory
+Allocation failed
+./makeCardslinear.sh: line 65: 4131655 Aborted                 combine -M MultiDimFit workspace/${cutoff}/workspace_${SSWWANA}_${operator}linear_2027.root --algo=grid --points 2000 -m 125 -t -1 --redefineSignalPOIs k_c${operator} --freezeParameters r --setParameters r=1 --setParameterRanges k_c${operator}=-100,100 -n _Expected_${operator}${cutoff}linear --verbose -1
+mv: cannot stat 'higgsCombine_Expected_T22000linear.MultiDimFit.mH125.root': No such file or directory
+ Expected Fit Done 
+ <UnknownClass::WorkingDirectory>: getcwd() failed
+Error in <UnknownClass::WorkingDirectory>: getcwd() failed
+Error in <UnknownClass::WorkingDirectory>: getcwd() failed
+ <<< Combine >>> 
+ <<< v10.2.1 >>>
+>>> Random number generator seed is 123456
+>>> Method used is MultiDimFit
+shell-init: error retrieving current directory: getcwd: cannot access parent directories: No such file or directory
+Error in <UnknownClass::WorkingDirectory>: getcwd() failed
+Error in <UnknownClass::WorkingDirectory>: getcwd() failed
+Error in <UnknownClass::WorkingDirectory>: getcwd() failed
+Error in <UnknownClass::WorkingDirectory>: getcwd() failed
+Error in <UnknownClass::WorkingDirectory>: getcwd() failed
+shell-init: error retrieving current directory: getcwd: cannot access parent directories: No such file or directory
+Could not get current working directory: No such file or directory
+LLVM ERROR: out of memory
+Allocation failed
+./makeCardslinear.sh: line 65: 4132770 Aborted                 (core dumped) combine -M MultiDimFit workspace/${cutoff}/workspace_${SSWWANA}_${operator}linear_2027.root --algo=grid --points 2000 -m 125 --redefineSignalPOIs k_c${operator} --freezeParameters r --setParameters r=1 --setParameterRanges k_c${operator}=-100,100 -n _Observed_${operator}${cutoff}linear --verbose -1
+mv: cannot stat 'higgsCombine_Observed_T22000linear.MultiDimFit.mH125.root': No such file or directory
+ Observed Fit Done 
+ <UnknownClass::WorkingDirectory>: getcwd() failed
+Error in <UnknownClass::WorkingDirectory>: getcwd() failed
+Error in <UnknownClass::WorkingDirectory>: getcwd() failed
+shell-init: error retrieving current directory: getcwd: cannot access parent directories: No such file or directory
+Error in <UnknownClass::WorkingDirectory>: getcwd() failed
+Error in <UnknownClass::WorkingDirectory>: getcwd() failed
+Error in <UnknownClass::WorkingDirectory>: getcwd() failed
+Error in <UnknownClass::WorkingDirectory>: getcwd() failed
+Error in <UnknownClass::WorkingDirectory>: getcwd() failed
+shell-init: error retrieving current directory: getcwd: cannot access parent directories: No such file or directory
+Could not get current working directory: No such file or directory
+LLVM ERROR: out of memory
+Allocation failed
+./makeCardslinear.sh: line 65: 4133186 Aborted                 python3 $CMSSW_BASE/src/HiggsAnalysis/AnalyticAnomalousCoupling/scripts/mkEFTScan.py fits/${cutoff}/higgsCombine_Expected_${operator}${cutoff}linear.MultiDimFit.mH125.root -p k_c${operator} -maxNLL 9 -ml Expected -others fits/${cutoff}/higgsCombine_Observed_${operator}${cutoff}linear.MultiDimFit.mH125.root:2:1:Observed -cms -preliminary -lumi "107" -xlabel "f_{${operator}}" -o plots/${cutoff}/scan_${operator}${cutoff}linear

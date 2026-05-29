@@ -12,8 +12,8 @@ SSWWANA="sswwAnalysis"$2
 operator=$3
 cutoff=$4
 
-LOG="logs/${cutoff}/fit_${SSWWANA}_${operator}.log"
-exec > >(tee -a "$LOG") 2>&1
+#LOG="logs/${cutoff}/fit_${SSWWANA}_${operator}.log"
+#exec > >(tee -a "$LOG") 2>&1
 
 combineCards.py -S \
 inputs/${cutoff}/datacard_${SSWWANA}_${operator}_202??_bin?.txt \
@@ -33,31 +33,31 @@ combine -M MultiDimFit workspace/${cutoff}/workspace_${SSWWANA}_${operator}_2027
     --redefineSignalPOIs k_c${operator} \
     --freezeParameters r  \
     --setParameters r=1    --setParameterRanges k_c${operator}=-17,17   \
-     -n _Expected_${operator} \
+     -n _Expected_${operator}${cutoff} \
     --verbose -1
-mv higgsCombine_Expected_${operator}.MultiDimFit.mH125.root fits/${cutoff}/
+mv higgsCombine_Expected_${operator}${cutoff}.MultiDimFit.mH125.root fits/${cutoff}/
 printf " Expected Fit Done \n ";
 
 combine -M MultiDimFit workspace/${cutoff}/workspace_${SSWWANA}_${operator}_2027.root  --algo=grid --points 2000  -m 125      \
     --redefineSignalPOIs k_c${operator} \
     --freezeParameters r  \
     --setParameters r=1    --setParameterRanges k_c${operator}=-17,17   \
-     -n _Observed_${operator} \
+     -n _Observed_${operator}${cutoff} \
     --verbose -1
-mv higgsCombine_Observed_${operator}.MultiDimFit.mH125.root fits/${cutoff}/
+mv higgsCombine_Observed_${operator}${cutoff}.MultiDimFit.mH125.root fits/${cutoff}/
 printf " Observed Fit Done \n ";
 
 #root -l -q higgsCombine_Expected_${operator}.MultiDimFit.mH125.root  higgsCombine_Observed_${operator}.MultiDimFit.mH125.root   ../test/draw.cxx\(\"k_${operator}\"\) 
 
 python3 $CMSSW_BASE/src/HiggsAnalysis/AnalyticAnomalousCoupling/scripts/mkEFTScan.py \
-  fits/${cutoff}/higgsCombine_Expected_${operator}.MultiDimFit.mH125.root \
+  fits/${cutoff}/higgsCombine_Expected_${operator}${cutoff}.MultiDimFit.mH125.root \
   -p k_c${operator} \
   -maxNLL 9 \
   -ml Expected \
-  -others fits/${cutoff}/higgsCombine_Observed_${operator}.MultiDimFit.mH125.root:2:1:Observed \
+  -others fits/${cutoff}/higgsCombine_Observed_${operator}${cutoff}.MultiDimFit.mH125.root:2:1:Observed \
   -cms -preliminary \
   -lumi "107" \
   -xlabel "f_{${operator}}" \
-  -o plots/${cutoff}/scan_${operator}
+  -o plots/${cutoff}/scan_${operator}${cutoff}
 
 fi
