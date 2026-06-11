@@ -1,92 +1,127 @@
-#!/bin/sh
+#!/bin/bash
 set -euo pipefail
 
-#if [ $1 = "-1" ]; then
-#  rm -f combine_logger.out log_* impacts* fitDiagnostic* higgsCombine* *text workspace* robustHesserobustHesse_* multidimfitrobustHesse_* 1;
-#  exit;
-#fi
+
+if [ "${1:-}" = "SSWW" ]; then
+
+  SSWWANA="sswwAnalysis"$2
+  operator=$3
+  cutoff=$4
+  min=$5
+  max=$6
+  whichfit=$7
+
+  mkdir -p "inputs/${cutoff}" "fits/${cutoff}" "workspace/${cutoff}" "plots/${cutoff}"
+
+  combined_card="inputs/${cutoff}/datacard_${SSWWANA}_${operator}_2027.text"
 
 
-if [ $1 = "SSWW" ]; then
+  combineCards.py -S \
+    inputs/${cutoff}/datacard_${SSWWANA}_${operator}_202??_bin?.txt \
+    > "${combined_card}"
 
-SSWWANA="sswwAnalysis"$2
-operator=$3
-cutoff=$4
-min=$5
-max=$6
+  printf "Combine cards Done\n"
 
-#LOG="logs/${cutoff}/fit_${SSWWANA}_${operator}.log"
-#exec > >(tee -a "$LOG") 2>&1
+  # Remove selected background normalization rateParams
+  sed -i.bak -E '
+  /^CMS_ssww_ewkwznorm[[:space:]]+rateParam[[:space:]]+ch(1|2|3|4|5|6|7|8|9|10|11|12)[[:space:]]+EWKWZ[[:space:]]+1[[:space:]]+\[0\.1,4\.9\][[:space:]]*$/d
+  /^CMS_ssww_wznorm[[:space:]]+rateParam[[:space:]]+ch(1|2|3|4|5|6|7|8|9|10|11|12)[[:space:]]+WZ[[:space:]]+1[[:space:]]+\[0\.1,4\.9\][[:space:]]*$/d
+  /^CMS_ssww_tvxnorm[[:space:]]+rateParam[[:space:]]+ch(1|2|3|4|5|6|7|8)[[:space:]]+TVX[[:space:]]+1[[:space:]]+\[0\.1,4\.9\][[:space:]]*$/d
+  /^CMS_ssww_nonpromptnorm[[:space:]]+rateParam[[:space:]]+ch(1|2|3|4|5|6|7|8|9|10|11|12)[[:space:]]+NonPrompt[[:space:]]+1[[:space:]]+\[0\.1,4\.9\][[:space:]]*$/d
+  ' "$combined_card"
+  printf "Removed selected ssWW rateParam lines from %s\n" "${combined_card}"
 
-combineCards.py -S \
-inputs/${cutoff}/datacard_${SSWWANA}_${operator}_202??_bin0.txt \
-> inputs/${cutoff}/datacard_${SSWWANA}_${operator}_2027.text
-printf "Combine cards Done \n ";
+#  rm -r *inputs/${cutoff}/*.bak
+  # EFT workspace
+  text2workspace.py \
+    "${combined_card}" \
+    -P HiggsAnalysis.AnalyticAnomalousCoupling.AnomalousCouplingEFTNegative:analiticAnomalousCouplingEFTNegative \
+    -o "workspace/${cutoff}/workspace_${SSWWANA}_${operator}_2027.root" \
+    --X-allow-no-signal \
+    --PO eftOperators=c${operator} \
+    --PO reuseCompleteDatacards
 
-# Remove selected background normalization rateParams
-sed -i -E '/^CMS_ssww_(ewkwznorm|nonpromptnorm|tvxnorm|wznorm)[[:space:]]+rateParam[[:space:]]+ch[1-6][[:space:]]+(EWKWZ|NonPrompt|TVX|WZ)[[:space:]]+1[[:space:]]+\[0\.1,4\.9\][[:space:]]*$/d' "${combined_card}"
-printf "Removed selected ssWW rateParam lines from ${combined_card}"
+  printf "Workspace Done\n"
 
-# Normal EFT model
-text2workspace.py      \
-        inputs/${cutoff}/datacard_${SSWWANA}_${operator}_2027.text   \
-        -P HiggsAnalysis.AnalyticAnomalousCoupling.AnomalousCouplingEFTNegative:analiticAnomalousCouplingEFTNegative  \
-        -o  workspace/${cutoff}/workspace_${SSWWANA}_${operator}_2027.root    --X-allow-no-signal  \
-      --PO eftOperators=c${operator} 
-printf "Workspace Done \n ";
-
-combine -M MultiDimFit workspace/${cutoff}/workspace_${SSWWANA}_${operator}_2027.root  --algo=grid --points 2000  -m 125   -t -1     \
+if [ "$whichfit" = "1" ]; then
+  # Expected scan
+  combine -M MultiDimFit "workspace/${cutoff}/workspace_${SSWWANA}_${operator}_2027.root" \
+    --algo=grid \
+    --points 2000 \
+    -m 125 \
+    -t -1 \
     --redefineSignalPOIs k_c${operator} \
-    --freezeParameters r  \
-    --setParameters r=1    --setParameterRanges k_c${operator}=-${min},${max} \
-     -n _Expected_${operator}${cutoff} \
+    --freezeParameters r \
+    --setParameters r=1\
+    --setParameterRanges k_c${operator}=-${min},${max} \
+    -n _Expected_${operator}${cutoff} \
     --verbose 2
-mv higgsCombine_Expected_${operator}${cutoff}.MultiDimFit.mH125.root fits/${cutoff}/
-printf " Expected Fit Done \n ";
 
-combine -M MultiDimFit workspace/${cutoff}/workspace_${SSWWANA}_${operator}_2027.root  --algo=grid --points 2000  -m 125      \
+
+  mv "higgsCombine_Expected_${operator}${cutoff}.MultiDimFit.mH125.root" "fits/${cutoff}/"
+
+  printf "Expected Fit Done\n"
+
+  # Observed scan
+  combine -M MultiDimFit "workspace/${cutoff}/workspace_${SSWWANA}_${operator}_2027.root" \
+    --algo=grid \
+    --points 2000 \
+    -m 125 \
     --redefineSignalPOIs k_c${operator} \
-    --freezeParameters r  \
-    --setParameters r=1    --setParameterRanges k_c${operator}=-${min},${max} \
-     -n _Observed_${operator}${cutoff} \
+    --freezeParameters r \
+    --setParameters r=1\
+    --setParameterRanges k_c${operator}=-${min},${max} \
+    -n _Observed_${operator}${cutoff} \
     --verbose 2
-mv higgsCombine_Observed_${operator}${cutoff}.MultiDimFit.mH125.root fits/${cutoff}/
-printf " Observed Fit Done \n ";
 
-#root -l -q higgsCombine_Expected_${operator}.MultiDimFit.mH125.root  higgsCombine_Observed_${operator}.MultiDimFit.mH125.root   ../test/draw.cxx\(\"k_${operator}\"\) 
+  mv "higgsCombine_Observed_${operator}${cutoff}.MultiDimFit.mH125.root" "fits/${cutoff}/"
 
-python3 $CMSSW_BASE/src/HiggsAnalysis/AnalyticAnomalousCoupling/scripts/mkEFTScan.py \
-  fits/${cutoff}/higgsCombine_Expected_${operator}${cutoff}.MultiDimFit.mH125.root \
-  -p k_c${operator} \
-  -maxNLL 35 \
-  -ml Expected \
-  -others fits/${cutoff}/higgsCombine_Observed_${operator}${cutoff}.MultiDimFit.mH125.root:2:1:Observed \
-  -cms -preliminary \
-  -lumi "309" \
-  -xlabel "f_{${operator}}" \
-  -o plots/${cutoff}/scan_${operator}${cutoff}
+  printf "Observed Fit Done\n"
 
-# Fit diagnostics for post-fit yields
+  # Plot scan
+  python3 "$CMSSW_BASE/src/HiggsAnalysis/AnalyticAnomalousCoupling/scripts/mkEFTScan.py" \
+    "fits/${cutoff}/higgsCombine_Expected_${operator}${cutoff}.MultiDimFit.mH125.root" \
+    -p k_c${operator} \
+    -maxNLL 9 \
+    -ml Expected \
+    -others "fits/${cutoff}/higgsCombine_Observed_${operator}${cutoff}.MultiDimFit.mH125.root:2:1:Observed" \
+    -cms -preliminary \
+    -lumi "280" \
+    -xlabel "f_{${operator}}" \
+    -o "plots/${cutoff}/scan_${operator}${cutoff}"
 
-PARAM="--redefineSignalPOIs k_c${operator} \
-       --freezeParameters r \
-       --setParameters r=1 \
-       --setParameterRanges k_c${operator}=-10,10"
+  printf "Scan Plot Done\n"
 
-combine -M FitDiagnostics \
-  workspace/${cutoff}/workspace_${SSWWANA}_${operator}_2027.root \
-  -m 125 \
-  -n _${operator}${cutoff}linear \
-  --saveShapes \
-  --saveWithUncertainties \
-  --saveNormalizations \
-  --saveOverallShapes \
-  --keepFailures \
-  --ignoreCovWarning \
-  --robustFit 1 \
-  --X-rtd FITTER_DYN_STEP \
-  ${PARAM}
+elif [ "$whichfit" = "2" ]; then
 
-mv fitDiagnostics_${operator}${cutoff}.root fits/${cutoff}/
+  PARAM="--redefineSignalPOIs k_c${operator} \
+         --freezeParameters r \
+         --setParameters r=1 \
+         --setParameterRanges k_c${operator}=-${min},${max}"
 
-printf " Fit Diagnostics Done \n "
+  combine -M FitDiagnostics \
+    "workspace/${cutoff}/workspace_${SSWWANA}_${operator}_2027.root" \
+    -m 125 \
+    -n _${operator}${cutoff} \
+    --saveShapes \
+    --saveWithUncertainties \
+    --saveNormalizations \
+    --saveOverallShapes \
+    --keepFailures \
+    --ignoreCovWarning \
+    --robustFit 1 \
+    --X-rtd FITTER_DYN_STEP \
+    ${PARAM}
+
+  mv "fitDiagnostics_${operator}${cutoff}.root" "fits/${cutoff}/"
+
+  if [ -f "higgsCombine_${operator}${cutoff}.FitDiagnostics.mH125.root" ]; then
+    mv "higgsCombine_${operator}${cutoff}.FitDiagnostics.mH125.root" "fits/${cutoff}/"
+  fi
+
+  printf "Fit Diagnostics Done\n"
+
+else
+  printf "No fit found: whichfit = %s\n" "$whichfit"
+fi
+fi
